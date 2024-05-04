@@ -69,7 +69,10 @@ export class AppController {
 
   @Get('fibonacci')
   async getFibonacci() {
+    console.log('API GATEWAY - RECEIVING');
     const fibo = await this.getFiboResult();
+    console.log('API GATEWAY - RECEIVED', fibo);
+
     return fibo;
   }
 }
